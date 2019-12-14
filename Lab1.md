@@ -5,12 +5,12 @@ http://data.gov.ua та зчитайте його (xls, xlsx – бінарні 
                                      
  ```R
 auditorsurl <- 'https://data.gov.ua/dataset/2fba6fe5-a069-42ef-93b5-f4af2f42abd9/resource/8901dbc0-544f-4247-92ce-2b3caca76b8b/download/auditor-07032019.xlsx'
-destfile = 'E:/R/auditors.xlsx'
+destfile = 'auditors.xlsx'
 download.file(auditorsurl, destfile, mode = 'wb')
          
 
 library(readxl)
-auditors <- read_xlsx('E:/R/auditors.xlsx')
+auditors <- read_xlsx('auditors.xlsx')
 head(auditors)
 
 # A tibble: 6 x 6
@@ -34,10 +34,10 @@ https://www.dropbox.com/s/dijv0rlwo4mryv5/PUMSDataDict06.pdf?dl=0
   
   ```R
 getdata_data_ss06hidURL <- 'https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06hid.csv'
-destfile = 'E:/R/getdata_data_ss06hid.csv'
+destfile = 'getdata_data_ss06hid.csv'
 download.file(getdata_data_ss06hidURL, destfile, mode = 'wb')
 
-getdata_data_ss06hid <- read.csv('E:/R/getdata_data_ss06hid.csv')
+getdata_data_ss06hid <- read.csv('getdata_data_ss06hid.csv')
 
 length(which(getdata_data_ss06hid$VAL==24))
 [1] 53
